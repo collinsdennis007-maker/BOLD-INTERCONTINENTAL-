@@ -1,0 +1,28 @@
+# Tests
+
+## Test 1 - App loads and main navigation works [sanity]
+Viewport: desktop
+Description: Verifies the BOLD app loads and navigation works.
+Steps:
+1. Open the app
+2. Click Dashboard
+3. Confirm dashboard content is visible
+Expected: Dashboard content is visible.
+
+## Test 2 - Wallet action updates balance
+Viewport: mobile
+Description: Verifies wallet interaction works.
+Steps:
+1. Open the app
+2. Click Wallet
+3. Click Add Demo Funds
+Expected: Balance action completes.
+
+## Test 3 - Transfer action works
+Viewport: desktop
+Description: Verifies sending money triggers a result.
+Steps:
+1. Open the app
+2. Click Send Money
+3. Click Send Demo Transfer
+Expected: Transfer Successful is displayed.
