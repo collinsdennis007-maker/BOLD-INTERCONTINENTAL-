@@ -1,5 +1,10 @@
-const [loggedIn, setLoggedIn] = useState(false);
 import React, { useState } from "react";
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Stats from "./components/Stats";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
 
 export default function App() {
   // ==========================
@@ -34,6 +39,8 @@ export default function App() {
   const [receipt, setReceipt] = useState("");
 
   const [settings, setSettings] = useState("");
+  
+  const [loggedIn, setLoggedIn] = useState(false);
 
   // ==========================
   // CONSTANTS
@@ -82,10 +89,17 @@ if (!loggedIn) {
           className="mt-8 w-full rounded-xl border p-4"
         />
 
-        <input
-          type="password"
-          placeholder="Password"
-          <div className="mt-3 text-right">
+       <input
+  type="password"
+  placeholder="Password"
+  className="mt-4 w-full rounded-xl border p-4"
+/>
+
+<div className="mt-3 text-right">
+  <button className="text-sm font-medium text-pink-600 hover:underline">
+    Forgot Password?
+  </button>
+</div>
   <button className="text-sm font-medium text-pink-600 hover:underline">
     Forgot Password?
   </button>
@@ -189,10 +203,19 @@ if (!loggedIn) {
 
         {/* ================= HOME ================= */}
 
-        {page === "Home" && (
-          <section className="rounded-3xl bg-white p-10 shadow-xl">
+          {page === "Home" && (
+  <>
+    <Header page={page} setPage={setPage} />
+    <Hero setPage={setPage} />
+    <Stats />
+    <Features />
+    <Footer />
+  </>
+)}
 
-            <p className="font-bold text-pink-600">
+{/* ================= DASHBOARD ================= */}
+
+{page === "Dashboard" && (
               BOLD INTERCONTINENTAL BANK
             </p>
 
@@ -317,79 +340,67 @@ if (!loggedIn) {
             DASHBOARD
         ========================== */}
 
-        {page === "Dashboard" && (
-          <section>
-            <h2 className="text-4xl font-bold">
-              Welcome Back
-            </h2>
+       {page === "Dashboard" && (
+  <section>
 
-            <div className="mt-6 rounded-3xl bg-pink-600 p-8 text-white shadow-xl">
-             <p className="text-lg opacity-80">
-                Available Balance
-              </p>
+    <h2 className="text-4xl font-bold">
+      Welcome Back
+    </h2>
 
-              <h3 className="mt-2 text-6xl font-black tracking-tight">
-                ${balance.toLocaleString()} USD
-              </h3>
+    <div className="mt-6 rounded-3xl bg-pink-600 p-8 text-white shadow-xl">
+      <p className="text-lg">
+        Available Balance
+      </p>
 
-              <div className="mt-6 grid gap-3 md:grid-cols-3">
-                <div className="rounded-2xl bg-white/20 p-4">
-                  🌍 Global Account
-                </div>
+      <h3 className="text-5xl font-black">
+        ${balance.toLocaleString()} USD
+      </h3>
 
-                <div className="rounded-2xl bg-white/20 p-4">
-                  🔒 Secure Wallet
-                </div>
+      <div className="mt-6 grid md:grid-cols-3 gap-3">
 
-                <div className="rounded-2xl bg-white/20 p-4">
-                  📈 Smart Finance
-                </div>
-              </div>
-            </div>
+        <div className="rounded-2xl bg-white/20 p-4">
+          Global Account
+        </div>
 
-           <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="rounded-2xl bg-white/20 p-4">
+          Secure Wallet
+        </div>
 
-  <button
-    onClick={() => setPage("Payments")}
-    className="rounded-3xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-  >
-    <div className="text-4xl">💸</div>
-    <h3 className="mt-3 text-xl font-bold">
-      Send Money
-    </h3>
-    <p className="mt-2 text-gray-500">
-      Transfer funds worldwide
-    </p>
-  </button>
+        <div className="rounded-2xl bg-white/20 p-4">
+          Smart Finance
+        </div>
 
-  <button
-    onClick={() => setPage("Wallet")}
-    className="rounded-3xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-  >
-    <div className="text-4xl">👛</div>
-    <h3 className="mt-3 text-xl font-bold">
-      Wallet
-    </h3>
-    <p className="mt-2 text-gray-500">
-      Manage your balances
-    </p>
-  </button>
+      </div>
 
-  <button
-    onClick={() => setPage("Cards")}
-    className="rounded-3xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-  >
-    <div className="text-4xl">💳</div>
-    <h3 className="mt-3 text-xl font-bold">
-      Cards
-    </h3>
-    <p className="mt-2 text-gray-500">
-      Control your virtual card
-    </p>
-  </button>
+    </div>
 
-</div>
+    <div className="mt-6 grid md:grid-cols-3 gap-4">
 
+      <button
+        onClick={() => setPage("Payments")}
+        className="rounded-2xl bg-white p-6 shadow"
+      >
+        Send Money
+      </button>
+
+      <button
+        onClick={() => setPage("Wallet")}
+        className="rounded-2xl bg-white p-6 shadow"
+      >
+        Wallet
+      </button>
+
+      <button
+        onClick={() => setPage("Cards")}
+        className="rounded-2xl bg-white p-6 shadow"
+      >
+        Cards
+      </button>
+
+    </div>
+
+  </section>
+)}
               <button
                 onClick={() => setPage("Payments")}
                 className="rounded-2xl bg-white p-6 shadow"
