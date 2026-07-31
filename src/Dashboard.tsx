@@ -14,17 +14,17 @@ export default function Dashboard({
     <section className="relative min-h-screen overflow-hidden bg-black">
 
       {/* Background */}
-      <img
-        src={luxuryBank}
-        alt="Luxury Bank"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+   <img
+  src={luxuryBank}
+  alt="Luxury Bank"
+  className="absolute inset-0 h-full w-full object-cover object-top md:object-center"
+/>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-pink-900/50 to-black/60" />
 
       {/* Hero */}
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 py-16">
+      <div className="relative z-10 flex min-h-screen items-center px-5 py-8 md:px-12 lg:px-20"
 
         <div className="grid w-full items-center gap-16 lg:grid-cols-2">
 
@@ -36,7 +36,7 @@ export default function Dashboard({
               BOLD INTERCONTINENTAL
             </p>
 
-            <h1 className="mt-8 text-6xl font-black leading-tight text-white">
+            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-7xl font-black leading-tight text-white"
               Banking
               <br />
               <span className="text-pink-400">
