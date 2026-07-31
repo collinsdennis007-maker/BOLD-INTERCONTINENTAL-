@@ -60,10 +60,15 @@ export default function Notifications() {
 
               </div>
 
-              <div
-                className={`h-4 w-4 rounded-full ${
-                  item.status === "success"
-                    className={`h-4 w-4 rounded-full ${
+            <div
+  className={`h-4 w-4 rounded-full ${
+    item.status === "success"
+      ? "bg-green-500"
+      : item.status === "warning"
+      ? "bg-yellow-500"
+      : "bg-red-500"
+  }`}
+></div>
   item.status === "success"
     ? "bg-green-500"
     : item.status === "warning"
