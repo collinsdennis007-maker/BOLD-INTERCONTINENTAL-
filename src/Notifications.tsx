@@ -58,15 +58,6 @@ export default function Notifications() {
                   {item.time}
                 </p>
 
-            
-      : "bg-red-500"
-  }`}
-></div>
-    item.status === "success"
-      ? "bg-green-500"
-      : item.status === "warning"
-      ? "bg-yellow-500"
-      : "bg-red-500"
   <div
   className={`h-4 w-4 rounded-full ${
     item.status === "success"
