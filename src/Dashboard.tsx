@@ -72,7 +72,10 @@ export default function Dashboard({
 
         <button
           onClick={() => setPage("Payments")}
-          className="rounded-2xl bg-gradient-to-r from-pink-500 to-fuchsia-600 px-8 py-4 font-bold text-white transition hover:scale-105"
+          className="rounded-2xl bg-gradient-to-r from-pink-500 to-fuchsia-600 px-8 py-4 font-bold text-white transition hover:scale-105
+hover:shadow-[0_0_40px_rgba(236,72,153,.5)]
+transition-all
+duration-300"
         >
           Send Money
         </button>
