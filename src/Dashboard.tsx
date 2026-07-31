@@ -1,4 +1,5 @@
 import React from "react";
+import luxuryBank from "./assets/luxury-bank.jpg";
 
 type DashboardProps = {
   balance: number;
@@ -10,41 +11,137 @@ export default function Dashboard({
   setPage,
 }: DashboardProps) {
   return (
-    <section className="space-y-8">
+    <section className="min-h-screen bg-[#faf7fb]">
 
-      <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-r from-[#8B005D] via-pink-600 to-fuchsia-700 p-10 text-white shadow-2xl">
+      <div className="relative overflow-hidden rounded-[40px] mx-6 mt-6 shadow-2xl">
 
-        <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10"></div>
-        <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-white/5"></div>
+        <img
+          src={luxuryBank}
+          alt="Luxury Bank"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-        <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent"></div>
 
-          <p className="text-sm uppercase tracking-[6px] text-pink-100">
-            BOLD INTERCONTINENTAL
-          </p>
+        <div className="relative z-10 p-10 md:p-16">
 
-          <h1 className="mt-8 text-5xl font-black">
-            ${balance.toLocaleString()}
-          </h1>
-
-          <p className="mt-3 text-pink-100">
-            Available Balance
-          </p>
-
-          <div className="mt-10 flex items-center justify-between">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             <div>
-              <p className="text-xs text-pink-200">
-                ACCOUNT
+
+              <p className="uppercase tracking-[8px] text-pink-600 font-bold">
+                BOLD INTERCONTINENTAL
               </p>
 
-              <h3 className="mt-1 font-bold">
-                BOLD •••• 9302
-              </h3>
+              <h1 className="mt-8 text-6xl font-black text-slate-900 leading-tight">
+                Banking
+                <br />
+                <span className="text-pink-600">
+                  Without Borders
+                </span>
+              </h1>
+
+              <p className="mt-8 max-w-xl text-lg text-slate-600">
+                Experience world-class private banking with luxury
+                digital services, global transfers, premium wealth
+                management and exclusive financial solutions.
+              </p>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+
+                <button
+                  onClick={() => setPage("Payments")}
+                  className="rounded-2xl bg-pink-600 px-8 py-4 text-white font-bold shadow-xl transition hover:scale-105"
+                >
+                  Send Money
+                </button>
+
+                <button
+                  onClick={() => setPage("Cards")}
+                  className="rounded-2xl bg-white/70 backdrop-blur-xl px-8 py-4 font-bold shadow-xl"
+                >
+                  Premium Cards
+                </button>
+
+              </div>
+
             </div>
 
-            <div className="rounded-full bg-white/20 px-5 py-2 backdrop-blur">
-              PREMIUM
+            <div className="flex justify-center">
+
+              <div className="w-full max-w-md rounded-[36px] bg-white/20 backdrop-blur-2xl p-8 border border-white/30 shadow-2xl">
+
+                <p className="text-white tracking-[5px] uppercase">
+                  Total Balance
+                </p>
+
+                <h2 className="mt-6 text-5xl font-black text-white">
+                  ${balance.toLocaleString()}
+                </h2>
+
+                <div className="mt-10 flex justify-between">
+
+                  <div>
+
+                    <p className="text-pink-100 text-sm">
+                      Account
+                    </p>
+
+                    <h3 className="font-bold text-white">
+                      **** 9302
+                    </h3>
+
+                  </div>
+
+                  <div className="rounded-full bg-white/20 px-5 py-2 text-white backdrop-blur">
+                    PRIVATE
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+                      <div className="mt-16 grid gap-6 md:grid-cols-4">
+
+              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
+                <h3 className="text-3xl font-black text-pink-600">
+                  180+
+                </h3>
+                <p className="mt-2 text-slate-600">
+                  Countries Supported
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
+                <h3 className="text-3xl font-black text-pink-600">
+                  24/7
+                </h3>
+                <p className="mt-2 text-slate-600">
+                  Private Concierge
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
+                <h3 className="text-3xl font-black text-pink-600">
+                  $12B+
+                </h3>
+                <p className="mt-2 text-slate-600">
+                  Assets Managed
+                </p>
+              </div>
+
+              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
+                <h3 className="text-3xl font-black text-pink-600">
+                  150K+
+                </h3>
+                <p className="mt-2 text-slate-600">
+                  Premium Clients
+                </p>
+              </div>
+
             </div>
 
           </div>
@@ -53,78 +150,57 @@ export default function Dashboard({
 
       </div>
 
-      <div className="grid gap-6 md:grid-cols-4">
+      <div className="mx-6 mt-10 grid gap-8 lg:grid-cols-2">
 
-        <button
-          onClick={() => setPage("Payments")}
-          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
-        >
-          <div className="text-4xl">💸</div>
-          <h3 className="mt-4 font-bold">
-            Transfer
-          </h3>
-        </button>
+        <div className="rounded-[32px] bg-white p-8 shadow-2xl">
 
-        <button
-          onClick={() => setPage("Wallet")}
-          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
-        >
-          <div className="text-4xl">👛</div>
-          <h3 className="mt-4 font-bold">
-            Wallet
-          </h3>
-        </button>
+          <h2 className="text-2xl font-bold">
+            Recent Activity
+          </h2>
 
-        <button
-          onClick={() => setPage("Cards")}
-          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
-        >
-          <div className="text-4xl">💳</div>
-          <h3 className="mt-4 font-bold">
-            Cards
-          </h3>
-        </button>
+          <div className="mt-8 space-y-6">
 
-        <button
-          onClick={() => setPage("AI Assistant")}
-          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
-        >
-          <div className="text-4xl">🤖</div>
-          <h3 className="mt-4 font-bold">
-            AI Banker
-          </h3>
-        </button>
+            <div className="flex justify-between">
+              <span>Salary Deposit</span>
+              <span className="font-bold text-green-600">
+                +$3,800
+              </span>
+            </div>
 
-      </div>
+            <div className="flex justify-between">
+              <span>Apple Store</span>
+              <span className="font-bold text-red-500">
+                -$799
+              </span>
+            </div>
 
-      <div className="rounded-3xl bg-white p-8 shadow-lg">
+            <div className="flex justify-between">
+              <span>Netflix</span>
+              <span className="font-bold text-red-500">
+                -$19
+              </span>
+            </div>
 
-        <h2 className="text-2xl font-bold">
-          Recent Activity
-        </h2>
-
-        <div className="mt-6 space-y-4">
-
-          <div className="flex justify-between border-b pb-3">
-            <span>Salary</span>
-            <span className="text-green-600">
-              +$3,800
-            </span>
           </div>
 
-          <div className="flex justify-between border-b pb-3">
-            <span>Netflix</span>
-            <span className="text-red-500">
-              -$19
-            </span>
-          </div>
+        </div>
 
-          <div className="flex justify-between">
-            <span>Amazon</span>
-            <span className="text-red-500">
-              -$120
-            </span>
-          </div>
+        <div className="rounded-[32px] bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700 p-8 text-white shadow-2xl">
+
+          <h2 className="text-2xl font-bold">
+            Private Banking
+          </h2>
+
+          <p className="mt-5 opacity-90">
+            Your relationship manager is available 24/7.
+          </p>
+
+          <button
+            className="mt-8 rounded-2xl bg-white px-8 py-4 font-bold text-pink-600"
+            onClick={() => setPage("AI Assistant")}
+          >
+            Talk to AI Banker
+          </button>
 
         </div>
 
