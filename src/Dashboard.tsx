@@ -11,7 +11,10 @@ export default function Dashboard({
   setPage,
 }: DashboardProps) {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+  <div className="min-h-screen bg-red-600 flex items-center justify-center text-white text-5xl font-bold">
+    THIS IS THE DASHBOARD
+  </div>
+);
 
       {/* Background */}
       <img
