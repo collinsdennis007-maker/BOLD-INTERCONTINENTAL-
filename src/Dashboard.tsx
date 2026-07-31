@@ -146,9 +146,9 @@ export default function Dashboard({
 
           </div>
 
-        </div>
+          </div>
 
-      </div>
+    </section>
         
       <div className="mx-6 mt-10 grid gap-8 lg:grid-cols-2">
 
