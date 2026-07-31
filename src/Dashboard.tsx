@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import luxuryBank from "./assets/luxury-bank.jpg";
 
@@ -24,13 +25,17 @@ export default function Dashboard({
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-pink-900/50 to-black/60" />
 
       {/* Hero */}
-      <div className="relative z-10 flex min-h-screen items-center px-5 py-8 md:px-12 lg:px-20">
-
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  className="relative z-10 flex min-h-screen items-center px-5 py-8 md:px-12 lg:px-20"
+>
         <div className="grid w-full items-center gap-16 lg:grid-cols-2">
 
           {/* Left */}
 
-          <div>
+         </motion.div>
 
             <p className="uppercase tracking-[8px] text-pink-300 font-bold">
               BOLD INTERCONTINENTAL
