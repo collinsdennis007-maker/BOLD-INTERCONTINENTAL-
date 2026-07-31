@@ -88,7 +88,7 @@ export default function Dashboard({
 
     </div>
 
-    {/* Balance Card */}
+    {/* Balance Card */}<div className="absolute right-20 top-32 h-96 w-96 rounded-full bg-pink-500/20 blur-3xl" />
 
     <div className="flex justify-center lg:justify-end">
 
