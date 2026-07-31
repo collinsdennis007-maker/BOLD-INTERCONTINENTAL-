@@ -149,7 +149,7 @@ export default function Dashboard({
         </div>
 
       </div>
-
+        
       <div className="mx-6 mt-10 grid gap-8 lg:grid-cols-2">
 
         <div className="rounded-[32px] bg-white p-8 shadow-2xl">
