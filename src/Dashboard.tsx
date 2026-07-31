@@ -118,8 +118,9 @@ export default function Dashboard({
 
 {/* Statistics */}
 
+<div className="relative z-10 -mt-16 px-6 pb-12">
 
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
+  <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
 
           <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-2xl">
 
