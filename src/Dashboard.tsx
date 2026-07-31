@@ -34,8 +34,7 @@ export default function Dashboard({
   <div className="grid w-full items-center gap-16 lg:grid-cols-2">
 
     {/* Left */}
-
-    <div>
+<div>
 
       <p className="uppercase tracking-[8px] text-pink-300 font-bold">
         BOLD INTERCONTINENTAL
@@ -119,94 +118,6 @@ export default function Dashboard({
 
 {/* Statistics */}
 
-    {/* Statistics */}
-
-          {/* Left */}
-<div>
-
-            <p className="uppercase tracking-[8px] text-pink-300 font-bold">
-                    
-              BOLD INTERCONTINENTAL
-            </p>
-
-         <h1 className="mt-8 text-4xl sm:text-5xl lg:text-7xl font-black leading-tight text-white">
-  Banking
-  <br />
-  <span className="text-pink-400">
-    Without Borders
-  </span>
-</h1>
-
-            <p className="mt-8 max-w-xl text-lg text-white/80 leading-8">
-              Premium digital banking built for global citizens with luxury
-              wealth management, international transfers and AI-powered
-              financial assistance.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-5">
-
-              <button
-                onClick={() => setPage("Payments")}
-                className="rounded-2xl bg-gradient-to-r from-pink-500 to-fuchsia-600 px-8 py-4 font-bold text-white hover:scale-105 transition"
-              >
-                Send Money
-              </button>
-
-              <button
-                onClick={() => setPage("Cards")}
-                className="rounded-2xl border border-white/20 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-xl"
-              >
-                Premium Cards
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* Balance Card */}
-
-          <div className="flex justify-center lg:justify-end">
-
-            <div className="w-full max-w-md rounded-[40px] border border-white/20 bg-white/10 p-8 backdrop-blur-3xl shadow-2xl">
-
-              <p className="uppercase tracking-[5px] text-pink-100">
-                Total Balance
-              </p>
-
-              <h2 className="mt-6 text-5xl font-black text-white">
-                ${balance.toLocaleString()}
-              </h2>
-
-              <div className="mt-10 flex justify-between">
-
-                <div>
-
-                  <p className="text-sm text-pink-100">
-                    Account
-                  </p>
-
-                  <h3 className="font-bold text-white">
-                    ****9302
-                  </h3>
-
-                </div>
-
-                <div className="rounded-full bg-pink-500 px-5 py-2 font-bold text-white">
-                  PRIVATE
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-            {/* Statistics */}
-
-      <div className="relative z-10 -mt-16 px-6 pb-12">
 
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
 
