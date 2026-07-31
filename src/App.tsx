@@ -6,17 +6,17 @@ import Stats from "./components/Stats";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 
-import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
-import Wallet from "./components/Wallet";
-import Payments from "./components/Payments";
-import Cards from "./components/Cards";
-import AIAssistant from "./components/AIAssistant";
-import Security from "./components/Security";
-import Notifications from "./components/Notifications";
-import Profile from "./components/Profile";
-import Statements from "./components/Statements";
-import Settings from "./components/Settings";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
+import Wallet from "./Wallet";
+import Payments from "./Payments";
+import Cards from "./Cards";
+import AIAssistant from "./AIAssistant";
+import Security from "./Security";
+import Notifications from "./Notifications";
+import Profile from "./Profile";
+import Statements from "./Statements";
+import Settings from "./Settings";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
