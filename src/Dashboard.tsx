@@ -119,65 +119,18 @@ export default function Dashboard({
 {/* Statistics */}
 
 <div className="relative z-10 -mt-16 px-6 pb-12">
-
   <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-          <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-2xl">
+    ...
+    four statistic cards
+    ...
 
-            <h3 className="text-4xl font-black text-pink-300">
-              180+
-            </h3>
+  </div>
+</div>
 
-            <p className="mt-3 text-white">
-              Countries Supported
-            </p>
+{/* Main Dashboard */}
 
-          </div>
-
-          <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-2xl">
-
-            <h3 className="text-4xl font-black text-pink-300">
-              24/7
-            </h3>
-
-            <p className="mt-3 text-white">
-              Private Concierge
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-2xl">
-
-            <h3 className="text-4xl font-black text-pink-300">
-              $12B+
-            </h3>
-
-            <p className="mt-3 text-white">
-              Assets Managed
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-2xl">
-
-            <h3 className="text-4xl font-black text-pink-300">
-              150K+
-            </h3>
-
-            <p className="mt-3 text-white">
-              Premium Clients
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Main Dashboard */}
-
-      <div className="relative z-20 rounded-t-[50px] bg-[#faf7fb] py-20">
-
+<div className="relative z-20 rounded-t-[50px] bg-[#faf7fb] py-20">
         <div className="mx-auto max-w-7xl px-6">
 
           <div className="grid gap-8 lg:grid-cols-2">
@@ -450,9 +403,9 @@ export default function Dashboard({
 
           </div>
 
-        </div>
+              </div> {/* max-w-7xl */}
 
-      </div>
+      </div> {/* Main Dashboard */}
 
     </section>
   );
