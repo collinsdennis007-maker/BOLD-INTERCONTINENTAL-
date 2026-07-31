@@ -10,12 +10,7 @@ export default function Dashboard({
   balance,
   setPage,
 }: DashboardProps) {
-  return (
-  <div className="min-h-screen bg-red-600 flex items-center justify-center text-white text-5xl font-bold">
-    THIS IS THE DASHBOARD
-  </div>
-);
-
+  
       {/* Background */}
       <img
         src={luxuryBank}
