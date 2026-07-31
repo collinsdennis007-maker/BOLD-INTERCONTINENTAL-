@@ -35,9 +35,13 @@ export default function Dashboard({
 
           {/* Left */}
 
-         </motion.div>
 
             <p className="uppercase tracking-[8px] text-pink-300 font-bold">
+                    </div>
+
+      </motion.div>
+
+      {/* Statistics */}
               BOLD INTERCONTINENTAL
             </p>
 
