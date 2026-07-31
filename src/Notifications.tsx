@@ -37,33 +37,35 @@ export default function Notifications() {
         </p>
       </div>
 
-      <div className="space-y-4">
+     <div className="space-y-4">
+  {notifications.map((item, index) => (
+    <div
+      key={index}
+      className="rounded-3xl bg-white p-6 shadow-lg"
+    >
+      <div className="flex items-center justify-between">
 
-        {notifications.map((item, index) => (
+        <div>
+          <h2 className="text-xl font-bold">
+            {item.title}
+          </h2>
 
-          <div
-            key={index}
-            className="rounded-3xl bg-white p-6 shadow-lg"
-          >
+          <p className="mt-1 text-slate-500">
+            {item.time}
+          </p>
+        </div>
 
-            <div className="flex items-center justify-between">
+        <div
+          className={`h-4 w-4 rounded-full ${
+            item.status === "success"
+              ? "bg-green-500"
+              : item.status === "warning"
+              ? "bg-yellow-500"
+              : "bg-red-500"
+          }`}
+        ></div>
 
-              <div>
-
-                <h2 className="text-xl font-bold">
-                  {item.title}
-                </h2>
-
-                <p className="mt-1 text-slate-500">
-                  {item.time}
-                </p>
-
-  <div
-  className={`h-4 w-4 rounded-full ${
-    item.status === "success"
-      ? "bg-green-500"
-      : item.status === "warning"
-      ? "bg-yellow-500"
-      : "bg-red-500"
-  }`}
-></div>
+      </div>
+    </div>
+  ))}
+</div>
