@@ -12,82 +12,74 @@ export default function Dashboard({
   return (
     <section className="space-y-8">
 
-      <div className="rounded-[40px] bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 p-10 text-white shadow-2xl">
+      <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-r from-[#8B005D] via-pink-600 to-fuchsia-700 p-10 text-white shadow-2xl">
 
-        <p className="text-lg opacity-90">
-          Welcome Back
-        </p>
+        <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10"></div>
+        <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-white/5"></div>
 
-        <h1 className="mt-2 text-5xl font-black">
-          ${balance.toLocaleString()}
-       <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-r from-[#8B005D] via-pink-600 to-fuchsia-700 p-10 text-white shadow-2xl">
+        <div className="relative">
 
-  <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10"></div>
-  <div className="absolute -left-10 -bottom-10 h-40 w-40 rounded-full bg-white/5"></div>
+          <p className="text-sm uppercase tracking-[6px] text-pink-100">
+            BOLD INTERCONTINENTAL
+          </p>
 
-  <div className="relative">
+          <h1 className="mt-8 text-5xl font-black">
+            ${balance.toLocaleString()}
+          </h1>
 
-    <p className="text-sm uppercase tracking-[6px] text-pink-100">
-      BOLD INTERCONTINENTAL
-    </p>
+          <p className="mt-3 text-pink-100">
+            Available Balance
+          </p>
 
-    <h1 className="mt-8 text-5xl font-black">
-      ${balance.toLocaleString()}
-    </h1>
+          <div className="mt-10 flex items-center justify-between">
 
-    <p className="mt-3 text-pink-100">
-      Available Balance
-    </p>
+            <div>
+              <p className="text-xs text-pink-200">
+                ACCOUNT
+              </p>
 
-    <div className="mt-10 flex items-center justify-between">
+              <h3 className="mt-1 font-bold">
+                BOLD •••• 9302
+              </h3>
+            </div>
 
-      <div>
-        <p className="text-xs text-pink-200">
-          ACCOUNT
-        </p>
+            <div className="rounded-full bg-white/20 px-5 py-2 backdrop-blur">
+              PREMIUM
+            </div>
 
-        <h3 className="mt-1 font-bold">
-          BOLD •••• 9302
-        </h3>
+          </div>
+
+        </div>
+
       </div>
 
-      <div className="rounded-full bg-white/20 px-5 py-2 backdrop-blur">
-        PREMIUM
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-<div className="grid gap-6 md:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-4">
 
         <button
           onClick={() => setPage("Payments")}
-          className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition"
+          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
         >
-          💸
+          <div className="text-4xl">💸</div>
           <h3 className="mt-4 font-bold">
-            Send Money
+            Transfer
           </h3>
         </button>
 
         <button
           onClick={() => setPage("Wallet")}
-          className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition"
+          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
         >
-          👛
+          <div className="text-4xl">👛</div>
           <h3 className="mt-4 font-bold">
             Wallet
           </h3>
         </button>
-</div>
+
         <button
           onClick={() => setPage("Cards")}
-          className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition"
+          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
         >
-          💳
+          <div className="text-4xl">💳</div>
           <h3 className="mt-4 font-bold">
             Cards
           </h3>
@@ -95,11 +87,11 @@ export default function Dashboard({
 
         <button
           onClick={() => setPage("AI Assistant")}
-          className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition"
+          className="rounded-3xl bg-white p-8 shadow-xl transition hover:-translate-y-2"
         >
-          🤖
+          <div className="text-4xl">🤖</div>
           <h3 className="mt-4 font-bold">
-            AI Concierge
+            AI Banker
           </h3>
         </button>
 
@@ -115,17 +107,23 @@ export default function Dashboard({
 
           <div className="flex justify-between border-b pb-3">
             <span>Salary</span>
-            <span className="text-green-600">+$3,800</span>
+            <span className="text-green-600">
+              +$3,800
+            </span>
           </div>
 
           <div className="flex justify-between border-b pb-3">
             <span>Netflix</span>
-            <span className="text-red-500">-$19</span>
+            <span className="text-red-500">
+              -$19
+            </span>
           </div>
 
           <div className="flex justify-between">
             <span>Amazon</span>
-            <span className="text-red-500">-$120</span>
+            <span className="text-red-500">
+              -$120
+            </span>
           </div>
 
         </div>
