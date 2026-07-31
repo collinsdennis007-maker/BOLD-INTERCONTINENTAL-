@@ -36,13 +36,13 @@ export default function Dashboard({
               BOLD INTERCONTINENTAL
             </p>
 
-            <h1 className="mt-8 text-4xl sm:text-5xl lg:text-7xl font-black leading-tight text-white"
-              Banking
-              <br />
-              <span className="text-pink-400">
-                Without Borders
-              </span>
-            </h1>
+         <h1 className="mt-8 text-4xl sm:text-5xl lg:text-7xl font-black leading-tight text-white">
+  Banking
+  <br />
+  <span className="text-pink-400">
+    Without Borders
+  </span>
+</h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/80 leading-8">
               Premium digital banking built for global citizens with luxury
