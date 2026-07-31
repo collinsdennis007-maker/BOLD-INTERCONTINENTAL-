@@ -139,50 +139,8 @@ export default function Dashboard({
   </div>
 
 </section>
-                      <div className="mt-16 grid gap-6 md:grid-cols-4">
-
-              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
-                <h3 className="text-3xl font-black text-pink-600">
-                  180+
-                </h3>
-                <p className="mt-2 text-slate-600">
-                  Countries Supported
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
-                <h3 className="text-3xl font-black text-pink-600">
-                  24/7
-                </h3>
-                <p className="mt-2 text-slate-600">
-                  Private Concierge
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
-                <h3 className="text-3xl font-black text-pink-600">
-                  $12B+
-                </h3>
-                <p className="mt-2 text-slate-600">
-                  Assets Managed
-                </p>
-              </div>
-
-              <div className="rounded-3xl bg-white/80 backdrop-blur-xl p-6 shadow-xl">
-                <h3 className="text-3xl font-black text-pink-600">
-                  150K+
-                </h3>
-                <p className="mt-2 text-slate-600">
-                  Premium Clients
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-
-          </div>
-        
+  
+         
       <div className="mx-6 mt-10 grid gap-8 lg:grid-cols-2">
 
         <div className="rounded-[32px] bg-white p-8 shadow-2xl">
