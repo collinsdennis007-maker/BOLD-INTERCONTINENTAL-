@@ -24,7 +24,7 @@ export default function Dashboard({
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-pink-900/50 to-black/60" />
 
       {/* Hero */}
-      <div className="relative z-10 flex min-h-screen items-center px-5 py-8 md:px-12 lg:px-20"
+      <div className="relative z-10 flex min-h-screen items-center px-5 py-8 md:px-12 lg:px-20">
 
         <div className="grid w-full items-center gap-16 lg:grid-cols-2">
 
