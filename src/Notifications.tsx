@@ -65,7 +65,11 @@ export default function Notifications() {
           }`}
         ></div>
 
-      </div>
+           </div>
     </div>
   ))}
 </div>
+
+</section>
+  );
+}
