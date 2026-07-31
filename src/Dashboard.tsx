@@ -1,3 +1,17 @@
+<nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/20 backdrop-blur-2xl">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <h1 className="text-xl font-black text-white">
+      BOLD <span className="text-pink-400">INTERCONTINENTAL</span>
+    </h1>
+
+    <button
+      onClick={() => setPage("Profile")}
+      className="rounded-xl bg-pink-500 px-5 py-2 text-white font-bold"
+    >
+      My Account
+    </button>
+  </div>
+</nav>
 import { motion } from "framer-motion";
 import React from "react";
 import luxuryBank from "./assets/luxury-bank.jpg";
