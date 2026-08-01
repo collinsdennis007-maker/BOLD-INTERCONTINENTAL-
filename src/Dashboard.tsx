@@ -122,13 +122,74 @@ duration-300"
 
     </div>
 
-    {/* Balance Card */}<div className="absolute right-20 top-32 h-96 w-96 rounded-full bg-pink-500/20 blur-3xl" />
+    {/* Balance Card */}
 
-    <div className="flex justify-center lg:justify-end">
+<div className="flex justify-center lg:justify-end">
+  <div className="w-full max-w-md rounded-[40px] border border-white/20 bg-white/10 p-8 backdrop-blur-3xl shadow-2xl">
 
-      <div className="w-full max-w-md rounded-[40px] border border-white/20 bg-white/10 p-8 backdrop-blur-3xl shadow-2xl">
+    <p className="uppercase tracking-[5px] text-pink-100">
+      Total Balance
+    </p>
 
-        <p className="uppercase tracking-[5px] text-pink-100">
+    <h2 className="mt-5 text-5xl font-black text-white">
+      ${balance.toLocaleString()}
+    </h2>
+
+    <div className="mt-8 space-y-4">
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇺🇸 USD</span>
+        <span className="font-bold text-white">
+          ${balance.toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇪🇺 EUR</span>
+        <span className="font-bold text-white">
+          €{(balance * 0.92).toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇬🇧 GBP</span>
+        <span className="font-bold text-white">
+          £{(balance * 0.79).toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇨🇦 CAD</span>
+        <span className="font-bold text-white">
+          C${(balance * 1.37).toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇦🇪 AED</span>
+        <span className="font-bold text-white">
+          AED {(balance * 3.67).toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇨🇭 CHF</span>
+        <span className="font-bold text-white">
+          CHF {(balance * 0.88).toLocaleString()}
+        </span>
+      </div>
+
+      <div className="flex justify-between">
+        <span className="text-white/70">🇯🇵 JPY</span>
+        <span className="font-bold text-white">
+          ¥{(balance * 150).toLocaleString()}
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
           Total Balance
         </p>
 
