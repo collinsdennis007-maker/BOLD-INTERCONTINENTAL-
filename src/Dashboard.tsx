@@ -1,3 +1,4 @@
+import CurrencyRates from "./components/CurrencyRates";
 import React from "react";
 import { motion } from "framer-motion";
 import luxuryBank from "./assets/luxury-bank.jpg";
@@ -252,7 +253,9 @@ export default function Dashboard({
 
           </div>
                     <div className="mt-10 grid gap-8 lg:grid-cols-2">
-
+<div className="mt-10">
+  <CurrencyRates />
+</div>
             {/* Quick Actions */}
             <div className="rounded-[32px] bg-white p-8 shadow-xl">
               <h2 className="text-2xl font-bold">
