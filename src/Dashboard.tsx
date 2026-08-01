@@ -39,6 +39,37 @@ export default function Dashboard({
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-pink-900/50 to-black/60" />
 
       {/* Hero */}
+      <div className="overflow-hidden border-y border-white/10 bg-black/30 backdrop-blur-xl">
+
+  <div className="animate-marquee whitespace-nowrap py-3 text-white">
+
+    <span className="mx-10">
+      USD • 1.000 ▲0.21%
+    </span>
+
+    <span className="mx-10">
+      EUR • 0.92 ▼0.11%
+    </span>
+
+    <span className="mx-10">
+      GBP • 0.78 ▲0.34%
+    </span>
+
+    <span className="mx-10">
+      AED • 3.67 ▲0.08%
+    </span>
+
+    <span className="mx-10">
+      BTC • $118,500 ▲1.4%
+    </span>
+
+    <span className="mx-10">
+      Gold • $3,390 ▲0.7%
+    </span>
+
+  </div>
+
+</div>
 <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
