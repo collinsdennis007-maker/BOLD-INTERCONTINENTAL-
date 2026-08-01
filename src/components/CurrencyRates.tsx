@@ -1,34 +1,20 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-
-type Rates = {
-  EUR: number;
-  GBP: number;
-  CHF: number;
-  AED: number;
-  JPY: number;
-  CAD: number;
-  AUD: number;
-};
-
-export default function CurrencyRates() {
-  const [rates, setRates] = useState<Rates | null>(null);
-
-  useEffect(() => {
-    axios
-      .get("https://open.er-api.com/v6/latest/USD")
-      .then((res) => {
-        setRates({
-          EUR: res.data.rates.EUR,
-          GBP: res.data.rates.GBP,
-          CHF: res.data.rates.CHF,
-          AED: res.data.rates.AED,
-          JPY: res.data.rates.JPY,
-          CAD: res.data.rates.CAD,
-          AUD: res.data.rates.AUD,
-        });
-      })
-      .catch(console.error);
+fetch("https://open.er-api.com/v6/latest/USD")
+  .then((res) => res.json())
+  .then((data) => {
+    setRates({
+      EUR: data.rates.EUR,
+      GBP: data.rates.GBP,
+      CHF: data.rates.CHF,
+      AED: data.rates.AED,
+      JPY: data.rates.JPY,
+      CAD: data.rates.CAD,
+      AUD: data.rates.AUD,
+    });
+  })
+  .catch((error) => {
+    console.error("Failed to fetch exchange rates:", error);
+  });
   }, []);
 
   if (!rates) {
