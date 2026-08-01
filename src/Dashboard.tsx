@@ -227,7 +227,132 @@ duration-300"
             </div>
 
             {/* AI Banker */}
+{/* Multi-Currency Wallet */}
 
+<div className="mt-10 rounded-[32px] bg-white p-8 shadow-xl">
+
+  <div className="flex items-center justify-between">
+    <h2 className="text-2xl font-bold">
+      Multi-Currency Wallet
+    </h2>
+
+    <button
+      onClick={() => setPage("Exchange")}
+      className="rounded-xl bg-pink-600 px-5 py-2 font-semibold text-white hover:bg-pink-700 transition"
+    >
+      Exchange
+    </button>
+  </div>
+
+  <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+    {/* USD */}
+
+    <div className="rounded-3xl border border-slate-200 p-6 hover:shadow-lg transition">
+
+      <div className="flex items-center justify-between">
+
+        <span className="text-4xl">
+          🇺🇸
+        </span>
+
+        <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
+          USD
+        </span>
+
+      </div>
+
+      <h3 className="mt-6 text-3xl font-black">
+        $12,540
+      </h3>
+
+      <p className="mt-2 text-gray-500">
+        US Dollar
+      </p>
+
+    </div>
+
+    {/* EUR */}
+
+    <div className="rounded-3xl border border-slate-200 p-6 hover:shadow-lg transition">
+
+      <div className="flex items-center justify-between">
+
+        <span className="text-4xl">
+          🇪🇺
+        </span>
+
+        <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
+          EUR
+        </span>
+
+      </div>
+
+      <h3 className="mt-6 text-3xl font-black">
+        €8,120
+      </h3>
+
+      <p className="mt-2 text-gray-500">
+        Euro
+      </p>
+
+    </div>
+
+    {/* GBP */}
+
+    <div className="rounded-3xl border border-slate-200 p-6 hover:shadow-lg transition">
+
+      <div className="flex items-center justify-between">
+
+        <span className="text-4xl">
+          🇬🇧
+        </span>
+
+        <span className="rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700">
+          GBP
+        </span>
+
+      </div>
+
+      <h3 className="mt-6 text-3xl font-black">
+        £4,550
+      </h3>
+
+      <p className="mt-2 text-gray-500">
+        British Pound
+      </p>
+
+    </div>
+
+    {/* CHF */}
+
+    <div className="rounded-3xl border border-slate-200 p-6 hover:shadow-lg transition">
+
+      <div className="flex items-center justify-between">
+
+        <span className="text-4xl">
+          🇨🇭
+        </span>
+
+        <span className="rounded-full bg-pink-100 px-3 py-1 text-sm font-semibold text-pink-700">
+          CHF
+        </span>
+
+      </div>
+
+      <h3 className="mt-6 text-3xl font-black">
+        CHF 9,870
+      </h3>
+
+      <p className="mt-2 text-gray-500">
+        Swiss Franc
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
             <div className="rounded-[32px] bg-gradient-to-br from-pink-600 via-fuchsia-600 to-purple-700 p-8 text-white shadow-xl">
 
               <h2 className="text-3xl font-bold">
