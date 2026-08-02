@@ -110,14 +110,20 @@ export default function Dashboard({
           {/* Balance Card */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-md rounded-[40px] border border-white/20 bg-white/10 p-8 shadow-2xl backdrop-blur-3xl">
-              <p className="uppercase tracking-[5px] text-pink-100">
-                Total Balance
-              </p>
+            <p className="uppercase tracking-[5px] text-pink-100">
+  Total Portfolio Value
+</p>
 
               <h2 className="mt-6 text-5xl font-black text-white">
                 ${balance.toLocaleString()}
               </h2>
+<p className="mt-3 text-green-300 font-semibold">
+  ▲ +8.42% this month
+</p>
 
+<p className="mt-1 text-sm text-white/70">
+  Last updated just now
+</p>
               <div className="mt-10 flex items-center justify-between">
                 <div>
                   <p className="text-sm text-pink-100">
