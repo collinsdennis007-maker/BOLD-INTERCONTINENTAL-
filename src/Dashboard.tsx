@@ -421,6 +421,7 @@ export default function Dashboard({
                 <div className="mt-10">
   <StockWatchlist />
 </div>
+               
                   Private Wealth Management
                 </h2>
 
