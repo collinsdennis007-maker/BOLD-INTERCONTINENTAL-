@@ -1,3 +1,4 @@
+import InvestmentPortfolio from "./components/InvestmentPortfolio";
 import CurrencyRates from "./components/CurrencyRates";
 import React from "react";
 import { motion } from "framer-motion";
@@ -403,6 +404,9 @@ export default function Dashboard({
           </div>
 
           {/* Wealth Management */}
+          <div className="mt-10">
+  <InvestmentPortfolio />
+</div>
           <div className="mt-10 rounded-[36px] bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 p-10 text-white shadow-xl">
 
             <div className="grid items-center gap-10 lg:grid-cols-2">
