@@ -39,12 +39,6 @@ export default function CurrencyRates() {
       </div>
     );
   }
-    return (
-      <div className="rounded-3xl bg-white p-8 shadow-xl">
-        Loading exchange rates...
-      </div>
-    );
-  }
 
   const currencies = Object.entries(rates);
 
