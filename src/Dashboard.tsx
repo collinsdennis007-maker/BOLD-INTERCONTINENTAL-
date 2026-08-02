@@ -23,7 +23,39 @@ export default function Dashboard({
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-pink-900/50 to-black/60" />
+<nav className="relative z-20 flex items-center justify-between px-6 py-6 lg:px-20">
+  <div className="text-2xl font-black text-white">
+    BOLD <span className="text-pink-400">INTERCONTINENTAL</span>
+  </div>
 
+  <div className="hidden gap-8 text-white md:flex">
+    <button onClick={() => setPage("Dashboard")} className="hover:text-pink-400">
+      Dashboard
+    </button>
+
+    <button onClick={() => setPage("Payments")} className="hover:text-pink-400">
+      Payments
+    </button>
+
+    <button onClick={() => setPage("Cards")} className="hover:text-pink-400">
+      Cards
+    </button>
+
+    <button onClick={() => setPage("Wallet")} className="hover:text-pink-400">
+      Wallet
+    </button>
+
+    <button onClick={() => setPage("AI Assistant")} className="hover:text-pink-400">
+      AI Banker
+    </button>
+  </div>
+
+  <button
+    className="rounded-full bg-pink-600 px-6 py-3 font-bold text-white hover:bg-pink-700"
+  >
+    Private Banking
+  </button>
+</nav>
       {/* Hero */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
