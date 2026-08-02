@@ -56,6 +56,12 @@ export default function Dashboard({
     Private Banking
   </button>
 </nav>
+<div className="relative z-20 px-6 lg:px-20">
+  <p className="text-sm text-white/70">
+    {new Date().toLocaleDateString()} •{" "}
+    {new Date().toLocaleTimeString()}
+  </p>
+</div>
       {/* Hero */}
       <motion.div
         initial={{ opacity: 0, y: 25 }}
