@@ -1,23 +1,44 @@
 import { useEffect, useState } from "react";
-fetch("https://open.er-api.com/v6/latest/USD")
-  .then((res) => res.json())
-  .then((data) => {
-    setRates({
-      EUR: data.rates.EUR,
-      GBP: data.rates.GBP,
-      CHF: data.rates.CHF,
-      AED: data.rates.AED,
-      JPY: data.rates.JPY,
-      CAD: data.rates.CAD,
-      AUD: data.rates.AUD,
-    });
-  })
-  .catch((error) => {
-    console.error("Failed to fetch exchange rates:", error);
-  });
+
+type Rates = {
+  EUR: number;
+  GBP: number;
+  CHF: number;
+  AED: number;
+  JPY: number;
+  CAD: number;
+  AUD: number;
+};
+
+export default function CurrencyRates() {
+  const [rates, setRates] = useState<Rates | null>(null);
+
+  useEffect(() => {
+    fetch("https://open.er-api.com/v6/latest/USD")
+      .then((res) => res.json())
+      .then((data) => {
+        setRates({
+          EUR: data.rates.EUR,
+          GBP: data.rates.GBP,
+          CHF: data.rates.CHF,
+          AED: data.rates.AED,
+          JPY: data.rates.JPY,
+          CAD: data.rates.CAD,
+          AUD: data.rates.AUD,
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to fetch exchange rates:", error);
+      });
   }, []);
 
   if (!rates) {
+    return (
+      <div className="rounded-3xl bg-white p-8 shadow-xl">
+        Loading exchange rates...
+      </div>
+    );
+  }
     return (
       <div className="rounded-3xl bg-white p-8 shadow-xl">
         Loading exchange rates...
