@@ -1,3 +1,4 @@
+import StockWatchlist from "./components/StockWatchlist";
 import InvestmentPortfolio from "./components/InvestmentPortfolio";
 import CurrencyRates from "./components/CurrencyRates";
 import React from "react";
@@ -407,6 +408,9 @@ export default function Dashboard({
           <div className="mt-10">
   <InvestmentPortfolio />
 </div>
+<div className="mt-10">
+  <StockWatchlist />
+</div>
           <div className="mt-10 rounded-[36px] bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 p-10 text-white shadow-xl">
 
             <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -414,6 +418,9 @@ export default function Dashboard({
               <div>
 
                 <h2 className="text-4xl font-black">
+                <div className="mt-10">
+  <StockWatchlist />
+</div>
                   Private Wealth Management
                 </h2>
 
