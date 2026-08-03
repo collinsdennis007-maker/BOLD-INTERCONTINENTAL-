@@ -1,3 +1,4 @@
+import SecurityCenter from "./components/SecurityCenter";
 import FinancialInsights from "./components/FinancialInsights";
 import RecentTransactions from "./components/RecentTransactions";
 import StockWatchlist from "./components/StockWatchlist";
@@ -420,6 +421,9 @@ export default function Dashboard({
       </div>
       <div className="mt-10">
   <FinancialInsights />
+</div>
+<div className="mt-10">
+  <SecurityCenter />
 </div>
           <div className="mt-10 rounded-[36px] bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 p-10 text-white shadow-xl">
 
