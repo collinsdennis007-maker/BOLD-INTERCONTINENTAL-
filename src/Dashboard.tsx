@@ -417,14 +417,9 @@ export default function Dashboard({
 
               <div>
 
-                <h2 className="text-4xl font-black">
-                <div className="mt-10">
-  <StockWatchlist />
-</div>
-               
-                  Private Wealth Management
-                </h2>
-
+<h2 className="text-4xl font-black">
+  Private Wealth Management
+</h2>
                 <p className="mt-6 max-w-xl leading-8 text-white/90">
                   Grow and protect your wealth with personalized investment
                   strategies, international banking and dedicated relationship
