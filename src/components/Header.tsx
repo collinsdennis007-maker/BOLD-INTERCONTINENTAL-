@@ -62,9 +62,7 @@ export default function Header({
   </button>
 </div>
 
-          <button className="px-5 py-2 rounded-full bg-pink-600 text-white">
-            Open Account
-          </button>
+        
         </div>
       </div>
     </header>
