@@ -4,7 +4,7 @@ type LoginProps = {
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function Login({ setLoggedIn ); }: LoginProps) {
+export default function Login({ setLoggedIn }: LoginProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
