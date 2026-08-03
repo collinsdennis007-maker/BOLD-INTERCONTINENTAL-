@@ -21,7 +21,7 @@ import Settings from "./Settings";
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("Dashboard");
 
   const [balance] = useState(25480);
 

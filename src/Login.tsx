@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 type LoginProps = {
-  onLogin: () => void;
+  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function Login({ onLogin }: LoginProps) {
+export default function Login({ setLoggedIn ); }: LoginProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,7 +12,7 @@ export default function Login({ onLogin }: LoginProps) {
     e.preventDefault();
 
     if (email && password) {
-      onLogin();
+      setLoggedIn(true);
     } else {
       alert("Please enter your email and password.");
     }
