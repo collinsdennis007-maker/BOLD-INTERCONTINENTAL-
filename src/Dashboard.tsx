@@ -1,3 +1,4 @@
+import FinancialInsights from "./components/FinancialInsights";
 import RecentTransactions from "./components/RecentTransactions";
 import StockWatchlist from "./components/StockWatchlist";
 import InvestmentPortfolio from "./components/InvestmentPortfolio";
@@ -417,6 +418,9 @@ export default function Dashboard({
         <div className="mt-10">
        <StockWatchlist />
       </div>
+      <div className="mt-10">
+  <FinancialInsights />
+</div>
           <div className="mt-10 rounded-[36px] bg-gradient-to-r from-pink-600 via-fuchsia-600 to-purple-700 p-10 text-white shadow-xl">
 
             <div className="grid items-center gap-10 lg:grid-cols-2">
