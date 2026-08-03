@@ -1,3 +1,4 @@
+import PortfolioChart from "./components/PortfolioChart";
 import StockWatchlist from "./components/StockWatchlist";
 import InvestmentPortfolio from "./components/InvestmentPortfolio";
 import CurrencyRates from "./components/CurrencyRates";
@@ -408,6 +409,11 @@ export default function Dashboard({
           <div className="mt-10">
         <InvestmentPortfolio />
         </div>
+        <div className="mt-10">
+
+  <PortfolioChart />
+
+</div>
         <div className="mt-10">
        <StockWatchlist />
       </div>
