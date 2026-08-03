@@ -3,8 +3,8 @@ import React from "react";
 type HeaderProps = {
   page: string;
   setPage: (page: string) => void;
+  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
 const navItems = [
   "Home",
   "Dashboard",
@@ -16,7 +16,11 @@ const navItems = [
   "Profile",
 ];
 
-export default function Header({ page, setPage }: HeaderProps) {
+export default function Header({
+  page,
+  setPage,
+  setLoggedIn,
+}: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/70 border-b border-pink-100">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
@@ -45,10 +49,18 @@ export default function Header({ page, setPage }: HeaderProps) {
           ))}
         </nav>
 
-        <div className="flex gap-3">
-          <button className="px-5 py-2 rounded-full border border-pink-500 text-pink-600">
-            Login
-          </button>
+      <div className="flex gap-3">
+  <button
+    onClick={() => setLoggedIn(false)}
+    className="px-5 py-2 rounded-full border border-red-500 text-red-600 hover:bg-red-50"
+  >
+    Logout
+  </button>
+
+  <button className="px-5 py-2 rounded-full bg-pink-600 text-white">
+    Open Account
+  </button>
+</div>
 
           <button className="px-5 py-2 rounded-full bg-pink-600 text-white">
             Open Account

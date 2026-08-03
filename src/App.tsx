@@ -46,9 +46,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100">
 
-     <Header
+    <Header
   page={page}
   setPage={setPage}
+  setLoggedIn={setLoggedIn}
 />
 
       <main className="mx-auto max-w-7xl p-6">
