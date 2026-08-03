@@ -1,3 +1,4 @@
+import RecentTransactions from "./components/RecentTransactions";
 import StockWatchlist from "./components/StockWatchlist";
 import InvestmentPortfolio from "./components/InvestmentPortfolio";
 import CurrencyRates from "./components/CurrencyRates";
@@ -218,7 +219,7 @@ export default function Dashboard({
 
           <div className="grid gap-8 lg:grid-cols-2">
 
-            {/* Recent Activity */}
+            <RecentTransactions />
             <div className="rounded-[32px] bg-white p-8 shadow-xl">
               <h2 className="text-2xl font-bold">
                 Recent Activity
