@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { auth } from "./firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 type RegisterProps = {
   onRegister: () => void;
 };
@@ -10,16 +11,24 @@ export default function Register({ onRegister }: RegisterProps) {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (!fullName || !email || !phone || !password) {
-      alert("Please fill in all fields.");
-      return;
-    }
+  if (!fullName || !email || !phone || !password) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+
+    alert("Account created successfully!");
 
     onRegister();
-  };
+  } catch (error: any) {
+    alert(error.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-900 to-pink-900 p-6">
