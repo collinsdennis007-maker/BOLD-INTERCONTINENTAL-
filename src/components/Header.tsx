@@ -5,6 +5,7 @@ type HeaderProps = {
   setPage: (page: string) => void;
   setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
 const navItems = [
   "Home",
   "Dashboard",
@@ -49,20 +50,17 @@ export default function Header({
           ))}
         </nav>
 
-      <div className="flex gap-3">
-  <button
-    onClick={() => setLoggedIn(false)}
-    className="px-5 py-2 rounded-full border border-red-500 text-red-600 hover:bg-red-50"
-  >
-    Logout
-  </button>
+        <div className="flex gap-3">
+          <button
+            onClick={() => setLoggedIn(false)}
+            className="px-5 py-2 rounded-full border border-red-500 text-red-600 hover:bg-red-50"
+          >
+            Logout
+          </button>
 
-  <button className="px-5 py-2 rounded-full bg-pink-600 text-white">
-    Open Account
-  </button>
-</div>
-
-        
+          <button className="px-5 py-2 rounded-full bg-pink-600 text-white">
+            Open Account
+          </button>
         </div>
       </div>
     </header>
