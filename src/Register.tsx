@@ -1,47 +1,60 @@
 import React, { useState } from "react";
 
-type LoginProps = {
-  onLogin: () => void;
-  onCreateAccount: () => void;
+type RegisterProps = {
+  onRegister: () => void;
 };
 
-export default function Login({
-  onLogin,
-  onCreateAccount,
-}: LoginProps) {
+export default function Register({ onRegister }: RegisterProps) {
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (email && password) {
-      setLoggedIn(true);
-    } else {
-      alert("Please enter your email and password.");
+    if (!fullName || !email || !phone || !password) {
+      alert("Please fill in all fields.");
+      return;
     }
+
+    onRegister();
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-slate-900 to-pink-900 p-6">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md rounded-[32px] bg-white p-10 shadow-2xl"
+        className="w-full max-w-lg rounded-[32px] bg-white p-10 shadow-2xl"
       >
         <h1 className="text-3xl font-black text-center">
-          BOLD INTERCONTINENTAL
+          Open Your Account
         </h1>
 
         <p className="mt-2 text-center text-gray-500">
-          Secure Client Login
+          Join BOLD INTERCONTINENTAL
         </p>
 
         <input
           className="mt-8 w-full rounded-xl border p-4"
+          placeholder="Full Name"
+          value={fullName}
+          onChange={(e) => setFullName(e.target.value)}
+        />
+
+        <input
+          className="mt-5 w-full rounded-xl border p-4"
           type="email"
           placeholder="Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          className="mt-5 w-full rounded-xl border p-4"
+          placeholder="Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
 
         <input
@@ -53,19 +66,11 @@ export default function Login({
         />
 
         <button
-          className="mt-8 w-full rounded-xl bg-pink-600 py-4 font-bold text-white hover:bg-pink-700"
           type="submit"
+          className="mt-8 w-full rounded-xl bg-pink-600 py-4 font-bold text-white hover:bg-pink-700"
         >
-          Login
+          Create Account
         </button>
-
-        <button
-  type="button"
-  onClick={onCreateAccount}
-  className="mt-4 w-full rounded-xl border border-pink-600 py-4 font-bold text-pink-600 hover:bg-pink-50"
->
-  Create Account
-</button>
       </form>
     </div>
   );

@@ -1,3 +1,4 @@
+import Register from "./Register";
 import React, { useState } from "react";
 
 import Header from "./components/Header";
@@ -20,6 +21,7 @@ import Settings from "./Settings";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const [page, setPage] = useState("Dashboard");
 
@@ -40,8 +42,19 @@ export default function App() {
   ];
 
   if (!loggedIn) {
-    return <Login setLoggedIn={setLoggedIn} />;
-  }
+  return showRegister ? (
+    <Register
+      onRegister={() => {
+        setShowRegister(false);
+      }}
+    />
+  ) : (
+    <Login
+      onLogin={() => setLoggedIn(true)}
+      onCreateAccount={() => setShowRegister(true)}
+    />
+  );
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-pink-100">
